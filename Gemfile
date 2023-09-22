@@ -75,4 +75,5 @@ end
 
 gem 'tailwindcss-rails', '~> 2.0'
 gem 'haml-rails', '~> 2.1'
+gem 'simple_form'
 

@@ -10,5 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_22_145010) do
+  create_table "newsletters", force: :cascade do |t|
+    t.string "email"
+    t.boolean "women_fashion"
+    t.boolean "men_fashion"
+    t.boolean "children_fashion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

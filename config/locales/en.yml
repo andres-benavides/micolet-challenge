@@ -30,4 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  newsletter:
+    title: Welcome! Sonn we will launch our site in this country.
+    preferences: Preferences
+    form:
+      women_fashion: Women's Fashion
+      men_fashion: Men's Fashion
+      children_fashion: Children's Fashion
+      button: Subcribe me!
