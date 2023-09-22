@@ -38,3 +38,6 @@ en:
       men_fashion: Men's Fashion
       children_fashion: Children's Fashion
       button: Subcribe me!
+      message:
+        success: Saved successfully!
+        error: Error
