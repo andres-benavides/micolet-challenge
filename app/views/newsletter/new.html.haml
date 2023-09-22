@@ -1,0 +1,21 @@
+%h1 Subscribe to Our Newsletter
+
+= form_with(model: @newsletter, local: true) do |form|
+  %div
+    = form.label :email, 'Email'
+    = form.text_field :email
+
+  %div
+    = form.label :women_fashion, 'Women Fashion'
+    = form.check_box :women_fashion
+
+  %div
+    = form.label :men_fashion, 'Men Fashion'
+    = form.check_box :men_fashion
+
+  %div
+    = form.label :children_fashion, 'Children Fashion'
+    = form.check_box :children_fashion
+
+  %div
+    = form.submit 'Subscribe'
