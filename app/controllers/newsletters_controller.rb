@@ -9,10 +9,14 @@ class NewslettersController < ApplicationController
 
   def create
     @newsletter = Newsletter.new(newsletter_params)
+    presenter = NewsletterPresenter.new(@newsletter,view_context)
+
     if @newsletter.save
+      flash[:notice] = presenter.success_message
       render 'new'
     else
-      render 'new', status: :unprocessable_entify
+      flash.now[:alert] = presenter.error_message
+      render 'new', status: 422
     end
   end
   private
