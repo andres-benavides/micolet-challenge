@@ -1,0 +1,113 @@
+@layer components {
+  .generic-content {
+    @apply flex
+      flex-col
+      flex-col-reverse
+      items-center
+      md:flex-row
+      lg:flex-row
+      justify-center
+      gap-24
+  }
+  .generic-content .hero {
+    @apply
+      lg:min-h-[333px]
+      lg:min-w-[274px]
+      lg:max-h-[367px]
+      bg-no-repeat
+      bg-[url("layout/generic-content/purple.svg"),_url("layout/generic-content/blue.svg")]
+      bg-[position:left_top,_left_bottom]
+      bg-[length:156px,_195px]
+      lg:bg-[length:219px,_274px]
+  }
+  .generic-content .hero img {
+    @apply
+      w-[162px]
+      max-w-[162px]
+      lg:w-[228px]
+      lg:max-w-[228px]
+      -ml-[25px]
+      h-auto
+  }
+
+  .generic-content .main {
+    @apply
+      max-w-[424px]
+  }
+
+  .generic-content .hero2 {
+    @apply
+      hidden
+      ml-[15px]
+      lg:block
+      lg:min-h-[445px]
+      lg:min-w-[420px]
+      bg-no-repeat
+      bg-[url("layout/generic-content/light_blue.svg"),_url("layout/generic-content/yellow.svg")]
+      bg-[position:left_top,_left_bottom]
+      bg-[length:125px,_160px]
+      lg:bg-[length:75%,_95%]
+  }
+
+  .generic-content .hero2 img {
+    @apply
+      w-[100%]
+      mt-[15%]
+      -ml-[15px]
+      lg:mt-[45px]
+      h-auto
+  }
+
+  .generic-content .hero3 {
+    @apply
+      lg:min-h-[408px]
+      lg:min-w-[299px]
+      lg:max-h-[367px]
+      bg-no-repeat
+      bg-[url("layout/generic-content/light_blue.svg"),_url("layout/generic-content/yellow.svg")]
+      bg-[position:left_top,_left_bottom]
+      bg-[length:156px,_195px]
+      lg:bg-[length:232px,_282px]
+  }
+  .generic-content .hero3 img {
+    @apply
+      w-[100%]
+      mt-[15%]
+      -ml-[21px]
+      lg:mt-[46px]
+      h-auto
+  }
+
+  .notice-banner {
+    @apply
+      bg-light-grey
+      flex
+      flex-col
+      lg:flex-row
+      justify-start
+      items-center
+      gap-4
+      lg:gap-11
+      py-8
+      px-16
+      lg:py-16
+      lg:px-40;
+  }
+
+  .notice-banner .description {
+    @apply flex flex-col justify-center;
+  }
+
+  .notice-banner .description h3 {
+    @apply mb-8;
+  }
+
+  .notice-banner .description h3,
+  .notice-banner .description p {
+    @apply max-w-[700px];
+  }
+
+  .notice-banner .hero img {
+    @apply max-w-[10rem] lg:max-w-full;
+  }
+}

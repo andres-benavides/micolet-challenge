@@ -1,0 +1,84 @@
+@layer components {
+  textarea,
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='phone'],
+  input[type='date'],
+  input[type='month'],
+  input[type='range'],
+  input[type='time'],
+  input[type='week'],
+  input[type='tel'],
+  input[type='search'],
+  input[type='url'],
+  input[type='datetime-local'],
+  input[type='number'] {
+    @apply
+      bg-blue-100
+      w-full
+      border-solid
+      border-blue-100
+      border
+      rounded-lg
+      text-blue-900
+      text-sm
+      px-4
+      py-3.5
+      outline-0
+      leading-[1.625rem]
+  }
+
+  ::placeholder {
+    @apply
+      text-grey-300
+  }
+
+  input:focus,
+  input:active,
+  textarea:active,
+  textarea:focus {
+    @apply
+      border
+      outline-0
+      border-blue-400
+  }
+
+  input:focus + .icon {
+    @apply
+     opacity-100
+  }
+
+
+  abbr {
+    @apply no-underline;
+  }
+
+  .form-submitted textarea:invalid,
+  .form-submitted input:invalid {
+    @apply text-red-600 w-full border-red-600;
+  }
+
+  .form-submitted :invalid::placeholder {
+    @apply text-red-700
+  }
+
+  /* targets all inputs that are not checbox, radio or submit buttons */
+  .form-submitted input:not([type='checkbox']):not([type='radio']):not([type='submit']):not(:placeholder-shown):valid,
+  .form-submitted input:not([type='checkbox']):not([type='radio']):not([type='submit']):focus:not(:placeholder-shown):valid,
+  .form-submitted textarea:valid:not(:placeholder-shown) {
+    @apply text-green-20 border-green-600;
+  }
+
+  .form-submitted input:not([type='checkbox']):not([type='radio']):not([type='submit']):not(:placeholder-shown):valid + .helper,
+  .form-submitted input:not([type='checkbox']):not([type='radio']):not([type='submit']):focus:not(:placeholder-shown):valid + .helper,
+  .form-submitted textarea:valid:not(:placeholder-shown) + .helper {
+    @apply text-green-600
+  }
+
+  .form-submitted input:not([type='checkbox']):not([type='radio']):not([type='submit']):invalid + .helper,
+  .form-submitted textarea:invalid + .helper {
+    @apply text-red-600
+  }
+
+}

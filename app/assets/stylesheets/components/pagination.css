@@ -1,0 +1,19 @@
+@layer components {
+  nav.pagination span {
+    @apply
+      mx-2
+  }
+
+  nav.pagination a {
+    @apply
+      text-xl
+      font-bold
+  }
+
+  nav.pagination .current {
+    @apply
+      text-xl
+      font-bold
+      text-blue-400
+  }
+}

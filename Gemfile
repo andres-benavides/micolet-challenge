@@ -53,6 +53,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec-rails'
   gem 'faker', '~> 3.2', '>= 3.2.1'
+  gem 'webmock'
 end
 
 group :development do
@@ -76,4 +77,5 @@ end
 gem 'tailwindcss-rails', '~> 2.0'
 gem 'haml-rails', '~> 2.1'
 gem 'simple_form'
+gem 'dotenv-rails', groups: [:development, :test]
 

@@ -1,0 +1,39 @@
+@layer components {
+  .section {
+    @apply
+      container
+      mx-auto
+      flex
+      flex-col
+      gap-4
+      py-8
+  }
+
+  .section .column {
+    @apply
+      flex
+      flex-col
+      gap-4
+  }
+
+  .section .row {
+    @apply
+      flex
+      flex-row
+      gap-4
+      
+  }
+  .section .wrap {
+    @apply
+      flex
+      flex-wrap
+      gap-3
+  }
+
+  .section .md_grid {
+    @apply
+      md:grid
+      md:grid-cols-2
+      gap-8
+  }
+}

@@ -1,0 +1,89 @@
+@layer components {
+  .toggle {
+    grid-template-columns: 3fr 2fr;
+    @apply
+      grid
+  }
+
+  .toggle .text label {
+    @apply
+      text-base
+  }
+
+  .switch {
+    @apply
+      relative
+      inline-block
+      w-10
+      h-6
+      mr-2.5
+  }
+
+  .switch input {
+    @apply
+      opacity-0
+      w-0
+      h-0
+  }
+
+  .slider {
+    -webkit-transition: .4s;
+    transition: .4s;
+    @apply
+      absolute
+      cursor-pointer
+      inset-0
+      bg-grey-200
+  }
+
+  .slider:before {
+    content: "";
+    -webkit-transition: .4s;
+    transition: .4s;
+    @apply
+      absolute
+      w-[1.125rem]
+      h-[1.125rem]
+      left-1
+      bottom-[0.188rem]
+      bg-white
+  }
+
+  input:checked + .slider {
+    @apply
+      bg-blue-800
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    @apply
+      rounded-full
+  }
+
+  .slider.round:before {
+    @apply
+      rounded-full
+  }
+
+  .toggle-filter-box {
+    @apply
+      fixed
+      top-0
+      left-0
+      bottom-0
+      bg-white
+      z-50
+      overflow-y-auto
+      pt-14
+      xl:block
+      xl:relative
+      xl:bg-transparent
+      xl:z-0
+  }
+}

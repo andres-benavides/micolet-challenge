@@ -8,16 +8,19 @@ class NewslettersController < ApplicationController
   end
 
   def create
-    @newsletter = Newsletter.new(newsletter_params)
-    presenter = NewsletterPresenter.new(@newsletter,view_context)
 
-    if @newsletter.save
-      flash[:notice] = presenter.success_message
-      render 'new'
-    else
-      flash.now[:alert] = presenter.error_message
-      render 'new', status: 422
-    end
+      validate_email = Newsletters::ValidateEmailService.new(newsletter_params[:email]).call
+      @newsletter = Newsletter.new(newsletter_params)
+      presenter = NewsletterPresenter.new(@newsletter,view_context)
+      
+
+      if validate_email && @newsletter.save
+        flash[:notice] = presenter.success_message
+        redirect_to newsletters_path
+      else
+        flash.now[:alert] = presenter.error_message(validate_email)
+        render 'new', status: 422
+      end
   end
   private
 

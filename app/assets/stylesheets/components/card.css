@@ -1,0 +1,140 @@
+@layer components {
+  .card {
+    box-shadow: 0px 0px 19px #C5C5C5;
+    @apply
+      px-3
+      py-6
+      sm:p-5
+      rounded-xl
+      flex
+      flex-col
+      gap-3
+      justify-start
+      overflow-hidden
+      bg-white
+  }
+
+  .list_cards {
+    @apply
+      grid
+      lg:grid-cols-2
+      gap-8
+  }
+
+  .action_icons {
+    @apply
+      flex
+      flex-row
+      gap-2
+  }
+
+  .card_details {
+    @apply
+      flex
+      flex-col
+  }
+
+  .card-order {
+    -webkit-transform: translateY(110%);
+    -ms-transform: translateY(110%);
+    transform: translateY(110%);
+    @apply
+      absolute
+      bottom-0
+      right-0
+      w-auto
+      bg-white
+  }
+  .card-no-shadow {
+    box-shadow: 0px 0px 0px;
+  }
+
+  .section_cards {
+    @apply
+    grid
+    grid-cols-1
+    gap-y-3
+    md:grid-cols-2
+    md:gap-y-4
+    md:gap-x-9
+    lg:gap-x-10
+  } 
+
+  .on_demand_tag {
+    @apply
+    absolute
+    w-full
+    h-[38px]
+    flex
+    justify-start
+    items-center
+    left-0
+    top-0
+    bg-yellow-400
+    py-1
+    px-5
+  }
+  
+  .on_demand_tag > img {
+    @apply
+    w-5
+    h-5
+  }
+
+  .section_tags {
+    @apply
+    flex
+    justify-between
+    w-full
+  }
+
+  .section_tags .box_tags {
+    @apply
+    flex
+    flex-row
+    flex-wrap
+    gap-2
+  }
+  
+  .section_tags .box_favorite {
+    @apply
+    flex
+    items-start
+  }
+
+  .section_info {
+    @apply
+    text-left
+  }
+
+  .section_info > p {
+    @apply
+    text-lg
+    text-blue-800
+    font-medium
+  }
+
+  .section_info > label {
+    @apply
+    text-grey-500
+    text-base
+  }
+
+  .section_aditional_info {
+    @apply
+    xl:grid
+    xl:grid-cols-2
+    xl:gap-2 
+  }
+
+  .tag_aditional_info {
+    @apply
+    flex
+    gap-2
+    mb-2
+    text-grey-500
+    text-base
+    truncate
+    items-center
+  }
+}

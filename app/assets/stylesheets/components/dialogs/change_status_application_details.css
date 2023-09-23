@@ -1,0 +1,99 @@
+@layer components {
+  .details-modal {
+    @apply
+      fixed
+      bg-white
+      flex
+      flex-col
+      min-h-[500px]
+      items-center
+      left-[50%]
+      max-w-[90%]
+      pointer-events-none
+      rounded-[40px]
+      shadow-[0_10px_20px_rgba(0,0,0,0.2)]
+      top-[50%]
+      translate-x-[-50%]
+      translate-y-[-50%]
+      w-[600px];
+  }
+  .details-modal .details-modal-close {
+    @apply
+      absolute
+      flex
+      h-[4.5em]
+      items-center
+      justify-center
+      pointer-events-none
+      right-0
+      top-0
+      w-[4.5em];
+  }
+  .details-modal .details-modal-header {
+    width: calc(100% - 6em);
+    @apply
+      pointer-events-auto
+      pt-12
+      relative;
+  }
+  .details-modal .details-modal-content {
+    @apply
+      flex
+      flex-col
+      items-center
+      overflow-auto
+      pointer-events-auto;
+  }
+  .details-modal .details-modal-content img {
+    @apply
+      h-[100px]
+      w-[100px]
+      mb-[35px];
+  }
+  .details-modal .details-modal-content .button-group {
+    @apply
+      gap-4
+      grid
+      grid-cols-2
+      mb-8
+      w-[85%];
+  }
+  .details-modal .details-modal-content .button-group .other {
+    @apply
+      col-span-2
+      flex
+      gap-x-5
+      items-center
+      justify-between
+      mt-8;
+  }
+  .details-modal .details-modal-content .button-group input {
+    @apply
+      text-sm
+      font-normal
+      min-h-[auto]
+      w-[60%];
+  }
+  .details-modal-overlay {
+    background: rgba(15, 23, 42, 0.8);
+    @apply
+      bottom-0
+      fixed
+      left-0
+      opacity-0
+      pointer-events-none
+      right-0
+      top-0
+      transition-opacity
+      z-10;
+  }
+
+  details[open] .details-modal-overlay {
+    @apply
+      pointer-events-auto
+      opacity-50;
+  }
+  details summary::-webkit-details-marker {
+    @apply hidden;
+  }
+}

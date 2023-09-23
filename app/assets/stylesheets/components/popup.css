@@ -1,0 +1,67 @@
+@layer components {
+  .button-modal {
+    @apply
+      list-none
+      cursor-pointer
+  }
+
+  .popup-content {
+    @apply
+      z-[3]
+      m-auto
+      inset-0
+      px-5
+      bg-white
+      fixed
+      flex
+      flex-col
+      justify-center
+      text-center
+      items-center
+      rounded-lg
+      w-[18.75rem]
+      h-[28.75rem]
+  }
+
+  .popup-content img {
+    @apply
+      mb-5
+  }
+
+  .popup-content .content {
+    @apply
+      mb-12
+  }
+
+  .popup-content .content {
+    @apply
+      mb-12
+  }
+
+  .popup-actions {
+    @apply
+      flex
+      justify-between
+      flex-col
+      w-[90%]
+  }
+
+  .popup-close {
+    @apply
+      mt-3
+  }
+
+  .popup-details[open] summary::before {
+    content: '';
+    @apply
+      block
+      w-screen
+      h-screen
+      bg-blue-900
+      fixed
+      top-0
+      left-0
+      opacity-50
+      z-[1]
+  }
+}

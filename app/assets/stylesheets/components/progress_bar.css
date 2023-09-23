@@ -1,0 +1,15 @@
+@layer components {
+  .full__bar {
+    @apply
+      w-3/4
+      bg-grey-200
+      rounded-full
+      h-2.5
+  }
+  .progress__bar {
+    @apply
+      bg-blue-600
+      h-2.5
+      rounded-full
+  }
+}

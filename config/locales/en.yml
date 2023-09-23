@@ -32,6 +32,7 @@
 en:
   newsletter:
     title: Welcome! Sonn we will launch our site in this country.
+    subtitle: Suscribe to receive our newsletter.
     preferences: Preferences
     form:
       women_fashion: Women's Fashion
@@ -39,5 +40,8 @@ en:
       children_fashion: Children's Fashion
       button: Subcribe me!
       message:
+        validate_checkbox: Please select at least one option.
         success: Saved successfully!
-        error: Error
+        error: Error saving
+        unique_email_error: This email is already registered
+        validation_email_error: Your email is not valid

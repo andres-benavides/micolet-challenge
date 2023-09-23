@@ -1,0 +1,36 @@
+@layer components {
+  footer {
+    @apply
+      pr-3
+      pl-4
+      py-11
+      lg:px-16
+      w-full
+      max-w-full
+      bg-blue-800
+  }
+
+  footer h6 {
+    @apply
+      text-white
+  }
+
+  footer li {
+    @apply
+      text-sm
+      mt-2
+  }
+
+  footer a {
+    @apply
+      text-white
+      text-sm
+      lg:text-base
+  }
+
+  footer ul.follow-us li {
+    @apply
+      w-[24px]
+      h-[24px]
+  }
+}

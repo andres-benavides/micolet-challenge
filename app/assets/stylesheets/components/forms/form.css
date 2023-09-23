@@ -1,0 +1,306 @@
+@layer components {
+  .check_boxes {
+    @apply
+      grid
+      grid-cols-3
+      gap-2
+  }
+
+  .radio_buttons {
+    @apply
+      flex
+      flex-col
+      gap-2
+  }
+
+  .form__box-date {
+    @apply
+      w-full
+      flex
+      gap-2
+      md:gap-8
+  }
+
+  .form__box-x {
+    @apply
+      flex
+      flex-col
+      w-full
+      gap-4
+      lg:flex-row
+      lg:gap-x-2
+  }
+
+  .form__flex-layout {
+    @apply
+      flex
+      flex-col
+      justify-center
+      items-baseline
+      flex-wrap
+      w-full
+      space-y-4
+      mx-auto
+  }
+
+  .form .form__box {
+    @apply
+      flex
+      flex-col
+      w-full
+      gap-4
+  }
+
+  .form .row_2xl {
+    @apply
+      flex
+      flex-col
+      gap-4
+      2xl:flex
+      2xl:flex-row
+      2xl:gap-8
+  }
+
+  .form .gap-short {
+    @apply
+      gap-1
+  }
+
+  .form__field {
+    @apply
+      w-full
+      inline-grid
+      grid-cols-1
+      gap-2
+      content-start
+  }
+
+  .form__field.checkbox,
+  .checkbox,
+  .boolean,
+  .radio,
+  .checkbox label {
+    @apply
+      flex
+      items-center
+      gap-2
+  }
+
+  .form__field.checkbox,
+  .initial_radio {
+    @apply
+      items-start
+  }
+
+  .form__field.checkbox label {
+    @apply p-0
+  }
+
+  form legend h6 {
+    @apply text-blue-700
+  }
+
+  label {
+    @apply
+      text-blue-900
+      text-left
+      text-sm
+  }
+
+  label span {
+    @apply text-red-600
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  fieldset {
+    @apply
+      w-full
+      mt-8
+  }
+
+  .form__field .helper {
+    @apply
+      text-sm
+      text-grey-400
+  }
+
+  .form__field > * {
+    @apply
+      mt-auto
+      w-full
+  }
+
+  .form__field .form__box-y {
+    @apply
+      flex
+      flex-col
+      gap-8
+      w-full
+      xl:flex-row
+  }
+
+  .form__field .form__box-date .field_with_errors {
+    @apply
+      w-full
+      flex
+      gap-2
+      md:gap-8
+  }
+
+  .field_with_errors input[type='text'],
+  .field_with_errors input[type='email'],
+  .field_with_errors input[type='password'],
+  .field_with_errors input[type='phone'],
+  .field_with_errors input[type='date'],
+  .field_with_errors input[type='month'],
+  .field_with_errors input[type='range'],
+  .field_with_errors input[type='time'],
+  .field_with_errors input[type='week'],
+  .field_with_errors input[type='tel'],
+  .field_with_errors input[type='search'],
+  .field_with_errors input[type='url'],
+  .field_with_errors input[type='number'],
+  .field_with_errors textarea {
+    @apply
+    text-red-600
+    w-full
+    border-red-600
+  }
+
+  select:has(+ div.form__field-error) {
+    @apply
+    border-red-600
+  }
+
+  .field_with_errors select:has(option[value=""]:checked) {
+    @apply
+    text-red-600
+    w-full
+    border-red-600
+  }
+
+  .field_with_errors select:has(option[value=""]) {
+    @apply
+    w-full
+    border-green-300
+    text-blue-900
+  }
+
+  .form__field-error:has(~ select:has(option[value=""])) {
+    @apply
+    text-green-300
+
+  }
+
+  textarea:not(:focus):not(:placeholder-shown):valid {
+    @apply
+    w-full
+    border-green-300
+    text-blue-900
+  }
+
+  .form__field-error input:not(:focus):not(:placeholder-shown):valid {
+    @apply
+    w-full
+    text-blue-900
+    border-green-300
+  }
+
+  .form__field-error {
+    @apply text-red-600;
+  }
+
+  .form__hidden-target,
+  .form__hidden-field-trigger {
+    @apply w-full gap-1 grid items-end;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .form__hidden-field-trigger input[type="checkbox"],
+  .form__hidden-target input[type="checkbox"],
+  .form__visible-target input[type="checkbox"] {
+    @apply w-auto;
+  }
+
+  .form__hidden-target label,
+  .form__hidden-field-trigger label,
+  .form__visible-target label {
+    @apply w-auto;
+  }
+
+  .form__hidden-target .form__target,
+  .form__visible-target .form__target {
+    @apply w-full col-span-2;
+  }
+
+  .form__hidden-target .form__target {
+    @apply visible;
+  }
+  .form__hidden-target input[type="checkbox"]:checked ~ .form__target {
+    @apply invisible;
+  }
+
+  .form__hidden-target input[type="checkbox"]:checked ~ .form__target.--noSpace {
+    @apply hidden;
+  }
+
+  .form__visible-target .form__target {
+    @apply invisible;
+  }
+
+  .form__visible-target input[type="checkbox"]:checked ~ .form__target {
+    @apply visible;
+  }
+
+  .membrane {
+    @apply
+      relative
+  }
+
+  .membrane .icon {
+    @apply
+     absolute
+     top-4
+     right-4
+     h-6
+     w-6
+     opacity-10
+  }
+
+  .field__grid {
+    grid-template-columns: 11fr 1fr;
+    @apply
+      grid
+      mb-6
+  }
+
+  .field__grid, .-show {
+    grid-template-columns: 9fr 3fr;
+  }
+
+  .field__grid .action {
+    @apply
+      justify-self-end
+  }
+
+  .nested-fields:last-child {
+    grid-column: span 2;
+  }
+
+  .two-columns {
+    grid-column: span 2;
+  }
+
+  hr {
+    @apply
+      border-grey-200
+  }
+
+  label abbr {
+    color: red;
+  }
+}

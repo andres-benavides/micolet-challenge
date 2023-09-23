@@ -1,0 +1,40 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-blue-900 text-ellipsis font-bold;
+  }
+
+  h1 {
+    @apply text-[2rem] leading-8 sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-[60px] font-extrabold;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-[2rem] lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-[2rem] leading-8;
+  }
+
+  h4 {
+    @apply text-[1.75rem] leading-8;
+  }
+
+  h5 {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  h6 {
+    @apply text-xl;
+  }
+
+  p,
+  span,
+  label {
+    @apply overflow-hidden text-ellipsis;
+  }
+}

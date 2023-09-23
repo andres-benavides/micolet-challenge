@@ -1,0 +1,79 @@
+@layer components {
+  .carousel {
+    transition: transform 0.3s ease;
+    @apply
+      flex
+      flex-nowrap
+  }
+  
+  .carousel-container {
+    @apply
+      w-full
+      overflow-hidden
+      rounded-xl
+  }
+  
+  .controls {
+    @apply
+      flex
+      justify-between
+      mt-4
+  } 
+
+  .control-btn {
+    @apply
+      flex
+      items-center
+      justify-center
+      w-10
+      h-10
+      rounded-full
+      bg-blue-300
+      cursor-pointer
+  }
+
+  .container-slide-identifier {
+    @apply
+      flex
+      items-center
+      justify-center
+      gap-8
+  }
+
+  .slide-identifier {
+    @apply
+      w-2
+      h-2
+      bg-grey-300
+      rounded-full
+  }
+
+  .active-slide-identifier {
+    @apply
+      w-7
+      h-2
+      bg-blue-300
+      rounded
+  }
+
+  .shadow-carousel {
+    box-shadow: 0px 0px 19px #C5C5C5;
+  }
+
+  .base-carousel {
+    @apply
+      w-full
+      flex
+      flex-col
+      items-center
+      justify-center
+      flex-none
+      mr-[10%]
+  }
+
+  .center-controls {
+    @apply
+      justify-center
+      pt-4
+  }
+}

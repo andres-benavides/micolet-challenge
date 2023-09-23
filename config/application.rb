@@ -10,6 +10,7 @@ module MicoletChallenge
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.autoload_paths << Rails.root.join('app', 'services')
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -18,5 +19,14 @@ module MicoletChallenge
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # config/application.rb
+    Bundler.require(*Rails.groups)
+
+    # Load dotenv only in development or test environment
+    if ['development', 'test'].include? ENV['RAILS_ENV']
+      Dotenv::Railtie.load
+    end
+
+    HOSTNAME = ENV['HOSTNAME']
   end
 end

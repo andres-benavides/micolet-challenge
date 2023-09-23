@@ -1,8 +1,10 @@
 .block
-  .mb-10
+  .mb-5
     %h1 
       = t('newsletter.title')
-
+  .mb-5
+    %h2 
+      = t('newsletter.subtitle')
   .p-4
     = simple_form_for  @newsletter, data: { turbo:false, controller: 'newsletter-validation' }, class: 'form_box' do |f|
       .form__box
@@ -28,7 +30,7 @@
           = f.label :children_fashion, t('newsletter.form.children_fashion')
       
       #checkbox-error.hidden
-        Por favor, selecciona al menos una opción.
+        =t('newsletter.titleform.message.validate_checkbox')
       
       = f.submit t('newsletter.form.button'), class: "bg-blue-500 text-white py-2 px-4", data: { action: "newsletter-validation#validate" }
 

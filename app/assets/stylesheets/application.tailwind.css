@@ -1,6 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "tailwindcss/components";
+
+@import './components/button.css';
+@import './components/typography.css';
+@import './components/flash.css';
+@import './components/load.css';
+@import './components/tag.css';
+@import './components/tab.css';
+@import './components/card.css';
+@import './components/pagination.css';
+@import './components/section_card.css';
+@import './components/progress_bar.css';
+@import './components/popup.css';
+@import './components/toggle.css';
+@import './components/icon.css';
+@import './components/section.css';
+@import './components/table.css';
+@import './components/steps.css';
+@import './components/text_action.css';
+@import './components/carousel.css';
+@import './components/sticky_buttom.css';
+
+@import './components/forms/form.css';
+@import './components/forms/select.css';
+@import './components/forms/checkbox.css';
+@import './components/forms/input.css';
+@import './components/forms/tooltip.css';
+@import './components/dialogs/change_status_application_details.css';
+
+@import './components/layout/navbar.css';
+@import './components/layout/footer.css';
+@import './components/layout/generic-content.css';
+@import './components/layout/content-data.css';
 
 /*
 

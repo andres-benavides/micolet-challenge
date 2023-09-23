@@ -1,0 +1,10 @@
+@layer components {
+  .basic__load {
+    @apply
+      flex
+      flex-col
+      justify-center
+      items-center
+      h-[300px]
+  }
+}

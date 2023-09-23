@@ -1,0 +1,311 @@
+@layer components {
+  header {
+    @apply
+      sticky
+      z-50
+      top-0
+      left-0
+      inset-x-0
+      px-[5%]
+      py-4
+      xl:py-0
+      w-full
+      max-w-full
+      bg-blue-800
+  }
+
+  header.white-header {
+    @apply
+      bg-white
+  }
+
+  header a {
+    @apply
+      text-sm
+      text-white
+      xl:text-base
+  }
+
+  header .logo.blue {
+    @apply
+      xl:w-56
+  }
+
+  header .logo {
+    @apply
+      w-28
+      xl:w-44
+  }
+
+  header nav {
+    @apply
+      flex
+      flex-row
+      justify-between
+      items-center
+      w-full
+  }
+
+  header input[type="checkbox"].icon-blue {
+    @apply
+      bg-[url("layout/navbar/hamburger-closed-blue.svg")]
+      checked:bg-[url("layout/navbar/hamburger-open-blue.svg")]
+      xl:hidden
+  }
+
+  header input[type="checkbox"] {
+    @apply
+      bg-[url("layout/navbar/hamburger-closed.svg")]
+      checked:bg-[url("layout/navbar/hamburger-open.svg")]
+      xl:hidden
+  }
+
+  header input[type="checkbox"],
+  header input[type="checkbox"]:checked,
+  header input[type="checkbox"]:active,
+  header input[type="checkbox"]:focus {
+    @apply
+      rounded-none
+      border-transparent
+      outline-transparent
+      ring-transparent
+      bg-transparent
+      bg-no-repeat
+      bg-center
+      bg-cover
+  }
+
+  header .hamburger-toggle + div {
+    @apply
+      invisible
+      xl:visible
+  }
+  header .hamburger-toggle:checked + div {
+    @apply
+      visible
+  }
+
+  header .nav-buttons-container {
+    @apply
+      absolute
+      block
+      left-0
+      top-14
+      w-full
+      bg-blue-800
+
+      xl:top-0
+      xl:relative
+      xl:visible
+      xl:bg-transparent
+      xl:border-none
+  }
+
+  header nav .white-home {
+    box-shadow: 0px 14px 12px -8px rgb(197 197 197 / 30%) inset;
+    @apply
+      bg-white
+  }
+
+  header .nav-buttons-container ul {
+    @apply
+      relative
+
+      mt-5
+      pb-7
+      flex
+      flex-col
+
+      xl:p-0
+      xl:flex-row
+      xl:items-stretch
+      xl:w-full
+      xl:ml-0
+      xl:bg-blue-800
+      xl:my-0
+      xl:justify-end
+  }
+
+  .nav-buttons-container .white-header {
+    @apply
+      xl:bg-white
+  }
+
+  header .nav-buttons-container ul li {
+    @apply
+      relative
+      flex
+      items-center
+      mt-2
+      px-[5%]
+      overflow-hidden
+      text-white
+      hover:bg-blue-900
+  }
+
+  header .nav-buttons-container ul .white-header {
+    @apply
+      hover:bg-grey-100
+  }
+
+  header .nav-buttons-container ul li.btn-wrapper {
+    @apply xl:px-0 xl:hover:bg-transparent
+  }
+
+  header .nav-buttons-container ul li:not(.btn-wrapper) {
+    @apply
+      xl:p-0
+      xl:m-0
+  }
+
+  header .nav-buttons-container ul .white-header:not(.btn-wrapper) {
+    @apply
+      xl:px-5
+  }
+
+  header .nav-buttons-container ul li a {
+    @apply
+      px-3
+      py-3
+      w-full
+      text-left
+  }
+
+  header .nav-buttons-container ul li .button-nav {
+    @apply
+      px-8
+  }
+
+  header .nav-buttons-container ul .white-header a {
+    @apply
+      text-blue-800
+  }
+
+  header .nav-buttons-container ul li:not(.btn-wrapper) a {
+    @apply
+      xl:text-center
+      xl:w-auto
+      xl:py-8
+  }
+
+  header .nav-buttons-container ul li:not(.btn-wrapper):hover:after {
+    content: "";
+    @apply hidden xl:block absolute bottom-0 bg-yellow-400 h-[3px] w-full rounded-lg
+  }
+
+  header .nav-buttons-container ul .white-header:not(.btn-wrapper):hover:after {
+    @apply
+      bg-yellow-500
+      right-0
+  }
+
+  header .nav-buttons-container ul li:not(.btn-wrapper):hover a {
+    @apply text-yellow-600
+  }
+
+  header .nav-buttons-container ul .white-header:not(.btn-wrapper):hover a {
+    @apply
+      text-blue-500
+      font-bold
+  }
+
+  .dropdown {
+    @apply
+      relative
+      text-white
+      cursor-pointer
+      text-center
+      xl:flex
+      xl:items-center
+  }
+
+  .dropdown:hover {
+    @apply
+      text-yellow-600
+  }
+
+  .dropdown:hover:after {
+    content: "";
+    @apply
+    hidden
+    xl:block
+    absolute
+    bottom-0
+    bg-yellow-400
+    h-[3px]
+    w-full
+    rounded-lg
+  }
+  .dropdown-items {
+    @apply
+      hidden
+      relative
+      top-[100%]
+      left-12
+      rounded-lg
+      bg-blue-900
+      shadow-md
+      w-20
+      md:left-16
+      lg:left-20
+  }
+
+  .dropdown:hover {
+    @apply
+      text-yellow-600
+  }
+
+  .dropdown:hover:after {
+    content: "";
+    @apply
+    hidden
+    xl:block
+    absolute
+    bottom-0
+    bg-yellow-400
+    h-[3px]
+    w-full
+    rounded-lg
+  }
+
+  .dropdown-items {
+    @apply
+      hidden
+      relative
+      top-[100%]
+      left-12
+      rounded-lg
+      bg-blue-900
+      shadow-md
+      w-20
+      md:left-16
+      lg:left-20
+      xl:absolute
+      xl:left-0
+      xl:w-full
+  }
+
+ .dropdown:hover .dropdown-items{
+    @apply
+      block
+      flex
+      flex-col
+      w-full
+      max-w-[85%]
+      md:max-w-[90%]
+      xl:max-w-full
+  }
+
+  .dropdown-items a {
+    @apply
+      text-white
+      p-3
+      flex
+      xl:justify-center
+  }
+
+  .dropdown-items a:hover {
+    @apply
+      text-yellow-600
+  }
+}

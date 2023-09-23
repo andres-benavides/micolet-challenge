@@ -1,0 +1,171 @@
+@layer components {
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/img/arrow_down_dark.svg") 97% 50% no-repeat transparent;
+
+    @apply bg-blue-100
+      border-solid
+      border-blue-100
+      border
+      rounded-lg
+      text-blue-900
+      px-4
+      py-3.5
+      outline-0
+      text-sm
+      box-border
+      max-h-14
+      leading-[1.625rem];
+  }
+   
+  select:has(option[value=""]:checked) {
+   background: url("/img/arrow_down.svg") 97% 50% no-repeat transparent;
+   @apply bg-blue-100
+      border-solid
+      border
+      rounded-lg
+      text-grey-300
+      px-4
+      py-3.5
+      outline-0
+      text-sm
+      box-border
+      max-h-14
+      leading-[1.625rem];
+  }
+
+  select:focus {
+    @apply border
+      border-blue-400
+      text-blue-900;
+  }
+
+  select option {
+    @apply text-blue-900
+      px-4
+      py-3.5
+      bg-white;
+  }
+
+  option[value=''] {
+   @apply text-grey-300;  
+  }
+
+  /* This is the dropdown with custom markup for the elements */
+
+  .select-button-container {
+    @apply border-solid
+      border-blue-100
+      border
+      rounded-lg
+      bg-blue-100
+      text-grey-300
+      text-sm
+      justify-center
+      min-w-[150px]
+      whitespace-nowrap
+      truncate
+      px-4
+      py-3.5;
+  }
+
+  .button {
+    @apply text-center;
+    display: grid;
+    grid-template-columns: auto 24px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'current-selection toggle-button'
+      'list-of-options';
+  }
+
+  .toggle-dropdown {
+    content: '';
+    grid-area: 'toggle-button';
+  }
+
+  .select-button-container > .selected-value {
+    @apply text-center;
+    grid-area: 'current-selection';
+  }
+
+  .select-button-container:hover {
+    @apply cursor-pointer
+      border-blue-400
+      text-blue-800;
+  }
+
+  .select-button-container ul {
+    @apply list-none
+      m-0
+      py-2
+      rounded-xl
+      shadow;
+  }
+
+  .select-button-container ul li {
+    @apply block
+      float-left
+      relative
+      no-underline
+      px-2;
+  }
+
+  .select-button-container li:hover,
+  .select-button-container li:focus-within {
+    @apply bg-dark-grey/[0.5]
+      text-blue-800
+      cursor-pointer;
+  }
+
+  .select-button-container li:focus-within a {
+    @apply outline-none;
+  }
+
+  .select-button-container ul.list-of-options {
+    @apply bg-white
+      shadow
+      border-solid
+      border-dark-grey
+      border
+      invisible
+      opacity-0
+      min-w-[5rem]
+      absolute
+      -mx-4
+      mt-4
+      transition-all
+      hidden;
+  }
+
+  .select-button-container:hover > ul,
+  .select-button-container:focus-within > ul,
+  .select-button-container ul:hover,
+  .select-button-container ul:focus {
+    @apply visible
+      opacity-100
+      block
+      z-10;
+  }
+
+  .select-button-container ul li {
+    @apply clear-both
+      w-full
+      py-3
+      px-8;
+  }
+
+  .form-submitted select:required:invalid {
+    @apply text-red-700 w-full border-red-600;
+  }
+
+  .form-submitted select:valid:not(:placeholder-shown) {
+    @apply text-green-20 border-green-600;
+  }
+
+  .form-submitted select:valid:not(:placeholder-shown) + .helper {
+    @apply text-green-600
+  }
+}

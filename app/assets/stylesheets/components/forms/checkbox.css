@@ -1,0 +1,74 @@
+@layer components {
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply
+      appearance-none
+      bg-white
+      text-dark-grey
+      justify-center
+      max-w-[24px]
+      min-w-[24px]
+      max-h-[24px]
+      min-h-[24px]
+      rounded
+
+      border-solid
+      border
+      border-blue-800/70
+
+      outline
+      outline-transparent
+      outline-0
+      outline-offset-0
+
+      ring
+      ring-transparent
+      ring-0
+      ring-offset-0
+  }
+
+  input[type="radio"] {
+    @apply
+      rounded-2xl
+  }
+
+  input[type="checkbox"]:hover,
+  input[type="radio"]:hover {
+    @apply
+      border-solid
+      border
+      border-blue-800/70
+
+  }
+
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    @apply
+      border-solid
+      border
+      border-blue-800/70
+
+  }
+
+  input[type="checkbox"]:active,
+  input[type="radio"]:active {
+    @apply
+      border-solid
+      border
+      border-blue-800/70
+
+  }
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    @apply
+      bg-blue-800
+      bg-[url("components/check.svg")]
+      bg-no-repeat
+      bg-center
+      bg-cover
+      border-solid
+      border
+      border-blue-800/70
+
+  }
+}

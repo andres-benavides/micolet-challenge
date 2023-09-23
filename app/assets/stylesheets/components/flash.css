@@ -1,0 +1,115 @@
+@layer components {
+  .flash {
+    animation: cssAnimation 0.5s 10s forwards;
+    @apply
+      fixed
+      z-40
+      lg:px-[50px]
+      justify-between
+      items-center
+      rounded-lg
+      px-[30px]
+      py-[15px]
+      font-medium
+      text-lg
+      flex
+      opacity-100
+      mx-4
+      border
+      border-solid
+    }
+
+  @keyframes cssAnimation {
+    0% {
+      opacity: 1
+    }
+    25% {
+      opacity: .75
+    }
+    50% {
+      opacity: .5
+    }
+    75% {
+      opacity: .25
+    }
+    100% {
+      opacity: 0
+    }
+  }
+
+  .flash span {
+    @apply
+      mr-4
+  }
+
+  .label-flash {
+    @apply
+      cursor-pointer
+      absolute
+      right-4
+      border-2
+      border-solid
+      font-bold
+      rounded-full
+      px-1.5
+  }
+
+  .error {
+    @apply
+      bg-red-600
+  }
+
+  .alert {
+    @apply
+      bg-red-300
+      text-grey-500
+      border-red-600
+  }
+
+  .alert .label-flash {
+    @apply
+      border-red-700
+      text-red-700
+  }
+
+  .success {
+    @apply
+      bg-green-200
+      text-grey-500
+      border-green-600
+  }
+
+  .success .label-flash {
+    @apply
+      border-green-800
+      text-green-800
+  }
+
+  .notice {
+    @apply
+      bg-green-200
+      text-grey-500
+      border-green-600
+  }
+
+  .notice .label-flash {
+    @apply
+      border-green-800
+      text-green-800
+  }
+
+  .timedout {
+    @apply
+      hidden
+  }
+
+  .visually-hidden {
+    @apply
+      hidden
+  }
+
+  input[type="checkbox"]:checked ~ .flash {
+    @apply
+      hidden
+  }
+}

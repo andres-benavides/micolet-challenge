@@ -1,0 +1,63 @@
+@layer components {
+  .tab {
+    @apply
+      bg-white
+      rounded-md
+      border-blue-800
+      border-solid
+      border-[1px]
+      box-border
+      text-blue-800
+      px-[1em]
+      py-[0.5em]
+      justify-center
+      max-w-fit
+      min-w-[150px]
+      font-semibold
+      align-top
+      whitespace-nowrap
+      truncate;
+  }
+
+  .tabs {
+    @apply
+      flex
+      flex-wrap
+      md:justify-end;
+  }
+
+  .tab-input {
+    @apply
+      hidden;
+  }
+
+  .tab-label {
+    @apply
+      grid
+      place-items-center
+      p-2
+      bg-white
+      rounded-md
+      w-[33%]
+      md:w-auto
+      md:ml-1
+      text-blue-700;
+  }
+
+  .tab-content {
+    @apply
+      hidden
+      w-full
+      order-1;
+  }
+
+  .tabbed input[type="radio"]:checked + label {
+    @apply
+      bg-blue-100;
+  }
+
+  .tabbed input[type="radio"]:checked + label + .tab-content {
+    @apply
+      block;
+  }
+}

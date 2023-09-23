@@ -1,0 +1,126 @@
+@layer components {
+  table {
+    box-shadow: 0px 0px 19px #C5C5C5;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    @apply
+      rounded-xl
+      border-solid
+      border-red-600
+      text-sm
+      text-center
+      overflow-x-scroll
+      block
+      w-full
+  }
+
+  table th {
+    @apply
+      py-4
+      px-2.5
+  }
+
+  table td {
+    @apply
+      p-2
+  }
+
+  table tr:nth-of-type(odd) {
+    @apply
+      bg-grey-100/[.4]
+  }
+
+  table tr:first-of-type {
+    @apply
+      bg-blue-700
+      text-white
+      text-center
+      border-solid
+      border-green-600
+  }
+
+  tr:first-child th:first-child { border-top-left-radius: 10px; }
+  tr:first-child th:last-child { border-top-right-radius: 10px; }
+
+  .box-state {
+    @apply
+      w-[210px]
+      h-6
+      px-3
+      my-0
+      mx-auto
+      border
+      border-solid
+      rounded-full
+  }
+
+  .box-state-active,
+  .box-state-hired {
+    @apply
+      border-green-300
+      bg-green-100
+  }
+  .box-state-selected,
+  .box-state-pending_for_publishing {
+    @apply
+      border-blue-200
+      bg-blue-100
+  }
+  .box-state-expired,
+  .box-state-not_interested {
+    @apply
+      border-red-400
+      bg-red-200
+      text-red-700
+  }
+  .box-state-preview,
+  .box-state-cited {
+    @apply
+      border-purple-400
+      bg-purple-100
+  }
+
+  .box-state-applied-offer {
+    @apply
+      w-[182px]
+      h-9
+      px-3
+      my-0
+      mx-auto
+      border
+      border-solid
+      rounded-full
+  }
+  .box-state-applied-offer-cited {
+    @apply
+      border-purple-400
+      bg-purple-100
+      text-purple-700
+  }
+
+  .box-state-applied-offer-hired {
+    @apply
+      border-green-300
+      bg-green-100
+      text-green-700
+  }
+  .box-state-applied-offer-selected {
+    @apply
+      border-blue-100
+      bg-blue-200
+      text-blue-700
+  }
+  .box-state-applied-offer-not_interested {
+    @apply
+      border-red-400
+      bg-red-200
+      text-red-700
+  }
+  .box-state-applied-offer-in_selection_process{
+    @apply
+      border-yellow-400
+      bg-yellow-200
+      text-yellow-700
+  }
+}

@@ -1,0 +1,64 @@
+@layer components {
+  .steps-title {
+    @apply
+      mb-6
+      pt-6
+      hidden
+      lg:block
+  }
+  .steps-section-tabs {
+    @apply 
+      flex
+      justify-between
+      mb-6
+  }
+
+  .steps-tab {
+    @apply
+      w-full
+      bg-white
+      flex
+      justify-center
+  }
+
+  .steps-tab-content {
+    @apply
+      flex
+      gap-2
+      py-4
+      lg:p-2
+      items-center
+  }
+
+  .steps-tab-text {
+    @apply
+      w-28
+      text-left
+  }
+
+  .steps-section-bar {
+    @apply
+      flex
+      flex-col
+      gap-3
+      py-8
+  }
+
+  .steps-bar {
+    @apply
+      flex
+      w-full
+      bg-blue-200
+      rounded-full
+  }
+  .steps-bar-title {
+    @apply
+      text-grey-300
+  }
+  
+  .steps-bar-progress {
+    @apply
+      bg-blue-800
+      rounded-full
+  }
+}

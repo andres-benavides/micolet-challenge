@@ -1,0 +1,13 @@
+.trix-content ul, .trix-content ol {
+    list-style: inside;
+}
+
+.trix-content ol {
+  @apply
+    list-decimal
+}
+
+.trix-content ul {
+  @apply
+    list-disc
+}

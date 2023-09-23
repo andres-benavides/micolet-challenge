@@ -37,20 +37,6 @@ module.exports = {
       900: '#041523'
     },
 
-    // ONLY USED AS REFERENCE. DELETE THIS LATER
-    //  blue: '#041523',
-    //  'blue-10': '#00365F',
-    //  'blue-20': '#1E4B82',
-    //  'blue-30': '#235695',
-    //  'blue-60': '#3477CE',
-    //  'blue-70': '#4696F7',
-    //  'blue-80': '#67AFF9',
-    //  'blue-95': '#C8E3FC',
-    //  'blue-99': '#E2EEF8',
-    //  'default-blue': '#00365F',
-    //  'mid-blue': '#0068A3',
-    //  'light-blue': '#62BAEA',
-    //  'black-blue': '#041523',
 
     yellow: {
       100: '#FDFBEB',
@@ -64,10 +50,7 @@ module.exports = {
       900: '#C9B13B'
     },
 
-    // ONLY USED AS REFERENCE. DELETE THIS LATER
-    // yellow: '#C9B13B',
-    // 'default-yellow': '#F5D107',
-    // 'yellow-50': '#F8E887',
+
 
     purple: {
       100: '#FDEFFF',
@@ -81,10 +64,7 @@ module.exports = {
       900: '#1A0C1C'
     },
 
-    // ONLY USED AS REFERENCE. DELETE THIS LATER
-    // purple: '#1A0C1C',
-    // 'purple-95': '#E6D8E8',
-    // 'purple-99': '#FDEFFF',
+
 
     green: '#00472A',
     'green-20': '#066D42',

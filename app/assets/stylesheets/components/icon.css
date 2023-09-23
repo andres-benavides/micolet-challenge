@@ -1,0 +1,37 @@
+@layer components {
+  .icon {
+    @apply
+    bg-blue-100/50
+    rounded-full
+    min-w-[36px]
+    h-9
+    flex
+    flex-wrap
+    justify-center
+  }
+  .btn-icon {
+    @apply
+    flex
+    justify-center
+    items-center
+  }
+  
+  .icon-svg{
+    @apply
+    w-4
+    h-5
+    bg-no-repeat
+    bg-center
+  }
+  
+  .icon-trash {
+    @apply
+    bg-[url('icons/trash.svg')]
+  }
+  
+  .btn:hover .icon-trash{
+    @apply
+    bg-[url('icons/trash_white.svg')]
+  }
+
+}
