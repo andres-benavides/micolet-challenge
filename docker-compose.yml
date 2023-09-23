@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  challenge:
+    build:
+      context: "./"
+      dockerfile: dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - "/app"
+    environment:
+      RAILS_ENV: development
+    command: 'bundle exec rails s --binding=0.0.0.0 -p8081'
+    network_mode: "host"
