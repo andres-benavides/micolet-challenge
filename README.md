@@ -19,7 +19,7 @@ Luego, navega al directorio del proyecto: `cd micolet-challenge`
 
 **Ejecutar el Proyecto:**
 
-Ejecuta el comando `docker-compos`e up o `docker compose up`, según la versión de Docker que tengas instalada
+Ejecuta el comando `docker-compose` up o `docker compose up`, según la versión de Docker que tengas instalada
 
 **Acceder al Proyecto:**
 
