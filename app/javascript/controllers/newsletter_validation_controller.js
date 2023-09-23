@@ -2,6 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
 
+  static targets = ['emailField', 'errorMessage'];
+
   constructor() {
     super(...arguments);
 
@@ -23,4 +25,26 @@ export default class extends Controller {
       this.checkboxError.classList.remove("hidden");
     }
   }
+
+  validateEmail(event){
+    const emailField = this.emailFieldTarget;
+    const errorMessage = this.errorMessageTarget;
+
+    
+    const emailValue = emailField.value.trim();
+    const emailPattern = new RegExp(emailField.getAttribute('pattern'));
+
+    if (!emailPattern.test(emailValue)) {
+      
+      errorMessage.classList.remove('hidden');
+      event.preventDefault(); 
+    } else {
+      errorMessage.classList.add('hidden');
+    }
+  }
+
+  emailValidation(event) {
+    this.validateEmail(event);
+  }
+  
 }

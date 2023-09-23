@@ -47,3 +47,16 @@
 .hidden {
   display: none;
 }
+
+.alert-success {
+  background-color: #89F073;
+  padding: 10px;
+}
+.alert-danger{
+  background-color: #FE3317;
+  padding: 10px;
+}
+
+.error {
+  color:  #FE3317;
+}

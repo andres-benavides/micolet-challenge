@@ -121,6 +121,10 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -260,6 +264,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  actionmailer
   bootsnap
   capybara
   debug
@@ -268,6 +273,7 @@ DEPENDENCIES
   haml-rails (~> 2.1)
   importmap-rails
   jbuilder
+  letter_opener (~> 1.8, >= 1.8.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
   rspec-rails

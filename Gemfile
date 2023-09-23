@@ -78,4 +78,6 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'haml-rails', '~> 2.1'
 gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'actionmailer'
+gem 'letter_opener', '~> 1.8', '>= 1.8.1'
 

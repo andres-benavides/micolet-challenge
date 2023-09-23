@@ -5,6 +5,7 @@ class NewslettersController < ApplicationController
 
   def new
     @newsletter = Newsletter.new
+    flash.clear
   end
 
   def create
@@ -16,6 +17,7 @@ class NewslettersController < ApplicationController
 
       if validate_email && @newsletter.save
         flash[:notice] = presenter.success_message
+        Newsletters::SubscriptionConfirmationService.new(@newsletter).call
         redirect_to newsletters_path
       else
         flash.now[:alert] = presenter.error_message(validate_email)

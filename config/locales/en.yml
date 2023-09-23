@@ -44,4 +44,10 @@ en:
         success: Saved successfully!
         error: Error saving
         unique_email_error: This email is already registered
-        validation_email_error: Your email is not valid
+        validation_email_error: Your email can't be validate
+        format_email_valid: Invalid email format
+    emails:
+      subscription_confirmation:
+        subject: You are subscribed to our newsletter
+        title: Thanks for subscribe to our newsletter
+        body_text: You have successfully subscribed. We are excited to have you as part of our community. We will keep you informed about our latest news and updates.
