@@ -15,6 +15,7 @@ git clone git@github.com:andres-benavides/micolet-challenge.git
 ```
 
 **Navegar al Directorio:**
+
 Luego, navega al directorio del proyecto: `cd micolet-challenge`
 
 **Ejecutar el Proyecto:**
