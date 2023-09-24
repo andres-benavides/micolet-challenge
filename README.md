@@ -21,6 +21,16 @@ Luego, navega al directorio del proyecto: `cd micolet-challenge`
 
 Ejecuta el comando `docker-compose` up o `docker compose up`, según la versión de Docker que tengas instalada
 
+Una vez el contenedor este corriendo, como es la primera vez que se ejecuta el proyecto se deben hacer las migraciones y la precompilacion de css, para esto con el contenedor corriendo y en una nueva ventana de la termina ejecutamos los siguientes comandos:
+
+para las migraciones:
+
+```docker exec micolet-challenge-challenge-1 bundle exec rails db:migrate```
+
+y luego para el CSS:
+
+```docker exec micolet-challenge-challenge-1 bundle exec rails assets:precompile```
+
 **Acceder al Proyecto:**
 
 Una vez que el proyecto esté en funcionamiento, abre tu navegador web y accede a la siguiente dirección:
