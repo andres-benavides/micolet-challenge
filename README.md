@@ -21,7 +21,7 @@ Luego, navega al directorio del proyecto: `cd micolet-challenge`
 
 Ejecuta el comando `docker-compose` up o `docker compose up`, según la versión de Docker que tengas instalada
 
-Una vez el contenedor este corriendo, como es la primera vez que se ejecuta el proyecto se deben hacer las migraciones y la precompilacion de css, para esto con el contenedor corriendo y en una nueva ventana de la termina ejecutamos los siguientes comandos:
+Una vez el contenedor este corriendo, como es la primera vez que se ejecuta el proyecto se deben hacer las migraciones y la precompilacion de css. Para esto, con el contenedor corriendo y en una nueva ventana de la termina ejecutamos los siguientes comandos:
 
 para las migraciones:
 
