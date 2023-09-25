@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto utiliza Ruby 3.1.1 y Rails 7.0.8. Puedes ejecutarlo de manera sencilla a través de Docker para evitar problemas de compatibilidad con diferentes versiones o sistemas operativos.
+Este proyecto utiliza Ruby 3.1.1 y Rails 7.0.8. Los escenarios de prueba estan construidos con la ayuda de rspec. Puedes ejecutarlo de manera sencilla a través de Docker para evitar problemas de compatibilidad con diferentes versiones o sistemas operativos.
 
 ## Instrucciones de Ejecución
 
