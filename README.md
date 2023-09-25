@@ -40,6 +40,10 @@ Una vez que el proyecto esté en funcionamiento, abre tu navegador web y accede 
 
 Deberías ver la página principal del proyecto, que incluye un botón que te llevará al formulario de suscripción al newsletter.
 
+**Ejecutar pruebas unitarias**
+
+Si deseas ejecutar las pruebas unitarias, desde la terminar dentro de la carpeta del proyecto puedes ejecutar el comando `docker compose run challenge bash` y una vez se active el bash del contenedor solo se debe ejecutar el comando `rspec`
+
 ## Confirmación de Suscripción
 Después de registrar un correo electrónico, puedes verificar si se ha enviado un correo electrónico de confirmación de suscripción. Esto se puede comprobar en la consola donde se está ejecutando el proyecto. Busca la información de envío similar a la siguiente:
 ```
